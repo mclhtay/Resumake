@@ -1,0 +1,33 @@
+#ifndef DRIVER_H
+#define DRIVER_H
+
+#include "ResumeObject/resume.h"
+#include "gui.h"
+#include "Utility/resumeutilities.h"
+#include "Pdf/pdfoutput.h"
+#include "SaveAndLoad/IO.h"
+/*!
+ * \brief The Driver class
+ */
+class Driver
+{
+
+public:
+    Driver();
+    /*!
+     * \brief startApplication starts the applications!!! (Test comment)
+     */
+    void startApplication();
+    /*!
+     * \brief This function does something
+     * \param r - a resume object to do something with
+     */
+    void convertToPDF(Resume * r);
+
+private:
+    Gui * gui;
+    Resume * resume;
+
+};
+
+#endif // DRIVER_H
